@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="www.thymeleaf.org">
+
+<head>
+
+   <title>Employee-list-page</title>
+   
+   <link rel="stylesheet" th:href="@{/css/demo.css}"/>
+   
+</head>
+
+<body>
+
+  <h2 align="center"><i>WELCOME TO EMPLOYEE LIST DASHBOARD</i></h2>
+  
+  <table border=1>
+  
+     <thead>
+        
+        <tr>
+            <td>EmpFirst_Name</td>
+            <td>EmpLastName</td>
+            <td>Employee_email</td>
+        </tr>
+     
+     </thead>
+     
+     <tbody><tr th:each="theEmployee : ${employees}">
+             
+                 <td th:text="${theEmployee.firstName}"/>
+                 <td th:text="${theEmployee.lastName}"/>
+                 <td th:text="${theEmployee.email}"/>
+            </tr>
+            
+     </tbody>   
+        
+  </table>
+
+</body>
+</html>
